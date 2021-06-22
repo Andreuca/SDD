@@ -1,0 +1,13 @@
+28,Non-Stop,Agigea,25.75,3
+98,ShopMania,Constanta,30.20,4
+13,Penny,Bucuresti,60.73,10
+21,Denisa SRL,Floresti,26.33,2
+11,La Nicusor,Nehoiu,33.89,2
+54,LaMagazin,Dumbravita,27.5,3
+73,Mega Image,Cluj,74.81,15
+57,La 2 Pasi,Bistrita,27.22,4
+100,Alfa Beta,Constanta,42.5,11
+37,La Magazin,Bordei Verde,27.25,1
+45,Lidl,Bacau,75,15
+127,La 2 Pasi,Nehoiu,30.75,1
+88,Magazin Alimentar,Constanta,29.55,2

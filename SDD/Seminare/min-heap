@@ -1,0 +1,21 @@
+void interschimbare(Heap &heap, int min, int pozitie) {
+	ApelUrgenta aux = heap.elemente[min];
+	heap.elemente[min] = heap.elemente[pozitie];
+	heap.elemente[pozitie] = aux;
+}
+
+void filtrare(Heap &heap, int parinte) {
+	int pozitieFiuStanga = 2 * parinte + 1;
+	int pozitieFiuDreapta = 2 * parinte + 2;
+	int min = parinte;
+	if (pozitieFiuStanga < heap.dim_efectiva && heap.elemente[min].prioritate > heap.elemente[pozitieFiuStanga].prioritate) {
+		min = pozitieFiuStanga;
+	}
+	if (pozitieFiuDreapta < heap.dim_efectiva && heap.elemente[min].prioritate > heap.elemente[pozitieFiuDreapta].prioritate) {
+		min = pozitieFiuDreapta;
+	}
+	if (min != parinte) {
+		interschimbare(heap, min, parinte);
+		filtrare(heap, min);
+	}
+}	

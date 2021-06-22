@@ -1,0 +1,10 @@
+﻿  Graf Popa.cpp
+c:\users\pizza\desktop\informatica economica\anul ii\anul ii - sem ii\sdd\proiect c - visual studio\proiect c - visual studio\graf popa.cpp(162): warning C4326: return type of 'main' should be 'int' instead of 'void'
+c:\users\pizza\desktop\informatica economica\anul ii\anul ii - sem ii\sdd\proiect c - visual studio\proiect c - visual studio\graf popa.cpp(213): warning C4018: '<': signed/unsigned mismatch
+c:\users\pizza\desktop\informatica economica\anul ii\anul ii - sem ii\sdd\proiect c - visual studio\proiect c - visual studio\graf popa.cpp(164): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: see declaration of 'fopen'
+c:\users\pizza\desktop\informatica economica\anul ii\anul ii - sem ii\sdd\proiect c - visual studio\proiect c - visual studio\graf popa.cpp(172): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(2263): note: see declaration of 'sscanf'
+c:\users\pizza\desktop\informatica economica\anul ii\anul ii - sem ii\sdd\proiect c - visual studio\proiect c - visual studio\graf popa.cpp(179): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(2263): note: see declaration of 'sscanf'
+  Proiect C - Visual Studio.vcxproj -> C:\Users\pizza\Desktop\Informatica Economica\Anul II\Anul II - Sem II\SDD\Proiect C - Visual Studio\Debug\Proiect C - Visual Studio.exe

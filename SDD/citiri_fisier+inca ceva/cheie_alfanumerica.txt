@@ -1,0 +1,5 @@
+
+int cod_hash(char* cheie, HashGradinita hs) {
+	return cheie[0] % 255 % hs.dimensiune;
+
+}

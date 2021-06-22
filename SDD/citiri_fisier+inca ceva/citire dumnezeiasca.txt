@@ -1,0 +1,32 @@
+FILE* file = fopen("facturi.txt", "r");
+	char buffer[128];
+	char* token;
+	char splitter[] = { "," };
+
+	int nr = 0, i = 0;
+	fscanf(file, "%d", &nr);
+	fgetc(file);
+
+	Factura* facturi = (Factura*)malloc(sizeof(Factura) * nr);
+
+	while (fgets(buffer, 128, file)) {
+		Factura a;
+		token = strtok(buffer, splitter);
+		a.cod = atoi(token);
+
+		token = strtok(NULL, splitter);
+		a.zile = atoi(token);
+
+		token = strtok(NULL, splitter);
+		a.suma = atoi(token);
+
+		token = strtok(NULL, splitter);
+		a.nume = (char*)malloc(sizeof(char) * (strlen(token) + 1));
+		strcpy(a.nume, token);
+
+		token = strtok(NULL, splitter);
+		a.prenume = (char*)malloc(sizeof(char) * (strlen(token) + 1));
+		strcpy(a.prenume, token);
+
+		facturi[i++] = a;
+	}

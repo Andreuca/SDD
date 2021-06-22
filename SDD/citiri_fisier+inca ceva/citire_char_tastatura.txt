@@ -1,0 +1,7 @@
+	printf("\nAdresa: ");
+	getchar();
+	char buf[30];
+	gets_s(buf, 30);
+	int dim = strlen(buf) + 1;
+	s.adresa = (char*)malloc(sizeof(char)*dim);
+	strcpy_s(s.adresa, dim, buf);

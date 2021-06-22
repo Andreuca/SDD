@@ -1,0 +1,10 @@
+2,80,Structuri de date,Marinescu George,SemI
+7,75,SGBD,Popescu Adrian,SemII
+15,80,Statistica,Pop Andreea,SemI
+4,90,Economie,Rotaru Gabriel,SemI
+2,80,Structuri de date,Placinta Elena,SemII
+11,75,SGBD,Mesu Stefan,SemI
+13,70,Algebra,Balan Maria,SemI
+20,65,Bazele Ciberneticii Economice,Pestritu Adelina,SemII
+19,80,Programare Java,Petrosu Mihai,SemII
+9,85,Programarea aplicatiilor Windows,Marian Andrei,SemII

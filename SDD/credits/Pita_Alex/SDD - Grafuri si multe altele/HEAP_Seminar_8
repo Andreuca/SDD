@@ -1,0 +1,142 @@
+#include <stdio.h>
+#include <malloc.h>
+#include <string.h>
+
+struct Mesaj {
+	char* text;
+	int prioritate;
+};
+
+Mesaj createMesaj(const char* mesaj, int prioritate) {
+	Mesaj m;
+	m.text = (char*)malloc(strlen(mesaj) + 1);
+	strcpy_s(m.text, strlen(mesaj) + 1, mesaj);
+	m.prioritate = prioritate;
+	return m;
+}
+
+void afisMesaj(Mesaj m) {
+	printf("%d. Text: %s.\n", m.prioritate, m.text);
+}
+
+struct HEAP {
+	Mesaj* vector;
+	int dimensiune;
+};
+
+void afisHeap(HEAP h) {
+	for(int i = 0; i < h.dimensiune; i++) {
+		afisMesaj(h.vector[i]);
+	}
+}
+
+
+//ca pozitii in heap avem -- Stanga - 2p+1 , Dreapta 2p+2 iar parintele are pozitia [(p-1)/2] - parte intreaga
+
+void filtrare(HEAP h,int pozitie) {
+	//determinam pozitia celor doi fii
+	int fiuS = 2 * pozitie + 1;
+	int fiuD = 2 * pozitie+2;
+	//considera mca parintele e maxim si salvam pozitia, dupa comparam cu cei 2 fii si salvam index
+	int max = pozitie;
+	if (h.vector[max].prioritate < h.vector[fiuS].prioritate && fiuS < h.dimensiune) {
+		max = fiuS;
+	}
+	if (h.vector[max].prioritate < h.vector[fiuD].prioritate && fiuD < h.dimensiune) {
+		max = fiuD;
+	}
+	//facem interschimbarea
+	if (max != pozitie) {
+		Mesaj aux = h.vector[max];
+		h.vector[max] = h.vector[pozitie];
+		h.vector[pozitie] = aux;
+		// asa verific daca nodul de pe max mai are vreun copil
+		if (2 * max + 1 < h.dimensiune) {
+			filtrare(h, max);
+		}
+	}
+
+}
+
+Mesaj extragereHeap(HEAP &h ) {
+	if (h.dimensiune > 0) {
+		Mesaj rez = h.vector[0];
+		Mesaj* temp = (Mesaj*)malloc(sizeof(Mesaj)*(h.dimensiune - 1));
+		for (int i = 1; i < h.dimensiune; i++) {
+			temp[i - 1] = h.vector[i];
+		}
+		free(h.vector);
+		h.vector = temp;
+		h.dimensiune--;
+		for (int i = (h.dimensiune - 2) / 2; i >= 0; i--) {
+			filtrare(h, i);
+		}
+		return rez;
+	}
+	else createMesaj("", -1);
+}
+
+void inserareMesaj(HEAP &heap, Mesaj m) {
+	if (heap.dimensiune >= 0) {
+		Mesaj* temp = (Mesaj*)malloc(sizeof(Mesaj)*(heap.dimensiune + 1));
+		for (int i = 0; i < heap.dimensiune; i++) {
+			temp[i] = heap.vector[i];
+		}
+		temp[heap.dimensiune] = m;
+		free(heap.vector);
+		heap.vector = temp;
+		heap.dimensiune++;
+		for (int i = (heap.dimensiune - 2) / 2; i >= 0; i--) {
+			filtrare(heap, i);
+		}
+	}
+}
+
+void afisareConditionata(HEAP &h,int prioritateminima) {
+	while (h.vector[0].prioritate >= prioritateminima) {
+		Mesaj m = extragereHeap(h);
+		printf("----------------------------------------------------------------------------\n");
+		afisMesaj(m);
+		free(m.text);
+	}
+}
+
+void main() {
+	HEAP h1;
+	h1.dimensiune = 6;
+	h1.vector = (Mesaj*)malloc(sizeof(Mesaj)*h1.dimensiune);
+	h1.vector[0] = createMesaj("Salut", 4);
+	h1.vector[1] = createMesaj("Buna", 8);
+	h1.vector[2] = createMesaj("La multi ani", 7);
+	h1.vector[3] = createMesaj("Hello", 6);
+	h1.vector[4] = createMesaj("La revedere", 9);
+	h1.vector[5] = createMesaj("Imi place SDD", 3);
+	afisHeap(h1);
+	//determinarea ultimului parinte
+	for (int i = (h1.dimensiune - 2) / 2; i >= 0; i--) {
+		filtrare(h1, i);
+	}
+	printf("----------------------------------------------------------------------------\n");
+	afisHeap(h1);
+	Mesaj m = extragereHeap(h1);
+	printf("----------------------------------------------------------------------------\n");
+	afisMesaj(m);
+	free(m.text);
+	printf("----------------------------------------------------------------------------\n");
+	afisHeap(h1);
+	printf("----------------------------------------------------------------------------\n");
+	inserareMesaj(h1, createMesaj("Cine esti ba?", 12));
+	afisHeap(h1);
+	printf("----------------------------------------------------------------------------\n");
+	while (h1.dimensiune) {
+		Mesaj m1 = extragereHeap(h1);
+		afisMesaj(m1);
+		free(m1.text);
+	}
+	printf("----------------------------------------------------------------------------\n");
+	if(h1.dimensiune>0)
+	afisHeap(h1);
+	else printf("NU EXISTA HEAP!\n");
+	printf("----------------------------------------------------------------------------\n");
+
+}

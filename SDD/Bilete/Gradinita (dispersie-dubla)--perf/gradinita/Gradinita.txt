@@ -1,0 +1,6 @@
+5
+1,99,200,Adrian,Cernescu,
+2,98,260,Razvan,Rosianu,
+3,100,250,Alina,Matei,
+4,110,300,Barbone,Alex,
+5,102,210,Paladonul,Gabriel,

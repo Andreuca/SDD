@@ -1,0 +1,7 @@
+6
+1,200,11,Atanase,Catalin,
+2,300,11,Vintu,Sorin,
+3,230,11,Basescu,Mihai,
+4,100,11,Esca,Andreea,
+5,110,11,Balan,Octavian,
+6,310,11,Popescu,Ovi,

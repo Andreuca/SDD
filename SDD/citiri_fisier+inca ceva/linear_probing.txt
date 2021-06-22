@@ -1,0 +1,21 @@
+void inserare(Disciplina d, HashGradinita& hs) {
+	if (hs.dimensiune != 0) {
+	
+		int hash = cod_hash(d.cod, hs); 
+		while (hs.elemente[hash] != NULL) {
+			hash = hash + 1;
+			
+		}
+		if (hash < hs.dimensiune) {
+			hs.elemente[hash] = (NodGradinita*)malloc(sizeof(NodGradinita));
+			hs.elemente[hash]->next = NULL;
+			hs.elemente[hash]->info = d;
+		}
+		else
+			printf("Elementul cu codul %d nu poate fi inserat", d.cod);
+	}
+	else
+	{
+		printf("Dimensiune invalida");
+	}
+}

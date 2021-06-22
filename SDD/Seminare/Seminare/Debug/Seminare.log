@@ -1,0 +1,3 @@
+﻿  Seminar5.cpp
+C:\Users\Baubau\Desktop\SDD\Seminare\Seminar5.cpp(158,13): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Seminare.vcxproj -> C:\Users\Baubau\Desktop\SDD\Seminare\Debug\Seminare.exe

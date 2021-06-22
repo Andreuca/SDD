@@ -1,0 +1,141 @@
+#include <stdio.h>
+#include <malloc.h>
+#include <string.h>
+
+
+struct Author
+{
+	char* name;
+	int age;
+};
+struct Book {
+	int id;
+	Author author;
+	int noPages;
+};
+
+Book readBook(FILE *f) {
+	Book b;
+	fscanf(f, "%d",&b.id);
+	char buffer[20];
+	fscanf(f, "%s", buffer);
+	b.author.name = (char*)malloc(strlen(buffer) + 1);
+	strcpy(b.author.name,buffer);
+	fscanf(f, "%d", &b.author.age);
+	fscanf(f, "%d", &b.noPages);
+	return b;
+};
+
+void printBook(Book b) {
+	printf("%d.  The book owned by %s with the age of %d \n", b.id,b.author.name,b.author.age,b.noPages);
+};
+
+struct NODE {
+	Book info;
+	NODE *left;
+	NODE* right;
+};
+
+NODE* initNode(Book info, NODE* left, NODE* right) {
+	NODE* newNode = (NODE*)malloc(sizeof(NODE));
+	newNode->info = info;
+	newNode->left = left;
+	newNode->right = right;
+	return newNode;
+}
+
+NODE* insertTree(NODE* root, Book b) {
+	
+	//does it exist?
+	if (root) {
+		//compare it with the root
+		if (b.id < root->info.id) {
+			root->left = insertTree(root->left, b);
+			return root;
+		}
+		//if it's higher
+		else {
+			root->right = insertTree(root->right, b);
+			return root;
+		}
+	}
+	else {
+		//if it doesnt exist
+		return initNode(b, nullptr, nullptr);
+	}
+}
+
+//u can read the tree in 3 ways
+	// - > post order
+	// - > pre order
+	// - > in order
+
+void printTree(NODE* root) {
+	//again, does it exist?
+	if (root) {
+		printTree(root->left);
+		printBook(root->info);
+		printTree(root->right);
+	}
+}
+
+Book searchBookById(NODE* root, int id) {
+	if (root) {
+		if (root->info.id == id) return root->info;
+		else {
+			if (root->info.id > id) {
+				return searchBookById(root->left, id);
+			}
+			else {
+				return searchBookById(root->right, id);
+			}
+		}
+	}
+	else {
+		Book b;
+		b.id = -1;
+		b.author.age = 0;
+		b.author.name = nullptr;
+		b.noPages = 0;
+		return b;
+	}
+}
+
+
+int height(NODE* root) {
+	if (root) {
+		int hL = height(root->left);
+		int hR = height(root->right);
+		return 1 + (hL > hR ? hL : hR);
+	}
+	else {
+		return 0;
+	}
+}
+
+void afis(NODE* root, int levelGiven,int currentLevel) {
+	if (root) {
+		if (levelGiven == currentLevel) {
+			printBook(root->info);
+		}else{
+			afis(root->left, levelGiven, currentLevel + 1);
+			afis(root->right, levelGiven, currentLevel + 1);
+		}
+	}
+}
+ //homework stergere nod
+void main() {
+	FILE *f = fopen("books.txt", "r");
+	NODE* root = NULL;
+	int n = 0;
+	fscanf(f, "%d", &n);
+	for (int i = 0; i < n; i++) {
+		root = insertTree(root, readBook(f));
+	}
+	printTree(root);
+	printf("-----------\n");
+	printBook(searchBookById(root, 2));
+	printf("----------------\n");
+	printf("%d", height(root));
+	afis(root, 3, 1);
+}

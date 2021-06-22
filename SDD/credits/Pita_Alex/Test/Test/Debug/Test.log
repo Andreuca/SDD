@@ -1,0 +1,39 @@
+﻿  1054_Pita_Alexandru.cpp
+c:\users\pizza\desktop\informatica economica\anul ii\anul ii - sem ii\sdd\test\test\1054_pita_alexandru.cpp(87): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(440): note: see declaration of 'strtok'
+c:\users\pizza\desktop\informatica economica\anul ii\anul ii - sem ii\sdd\test\test\1054_pita_alexandru.cpp(88): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(133): note: see declaration of 'strcpy'
+c:\users\pizza\desktop\informatica economica\anul ii\anul ii - sem ii\sdd\test\test\1054_pita_alexandru.cpp(121): warning C4018: '<': signed/unsigned mismatch
+c:\users\pizza\desktop\informatica economica\anul ii\anul ii - sem ii\sdd\test\test\1054_pita_alexandru.cpp(142): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(133): note: see declaration of 'strcpy'
+c:\users\pizza\desktop\informatica economica\anul ii\anul ii - sem ii\sdd\test\test\1054_pita_alexandru.cpp(144): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(133): note: see declaration of 'strcpy'
+c:\users\pizza\desktop\informatica economica\anul ii\anul ii - sem ii\sdd\test\test\1054_pita_alexandru.cpp(189): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(440): note: see declaration of 'strtok'
+c:\users\pizza\desktop\informatica economica\anul ii\anul ii - sem ii\sdd\test\test\1054_pita_alexandru.cpp(190): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(133): note: see declaration of 'strcpy'
+c:\users\pizza\desktop\informatica economica\anul ii\anul ii - sem ii\sdd\test\test\1054_pita_alexandru.cpp(197): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(133): note: see declaration of 'strcpy'
+c:\users\pizza\desktop\informatica economica\anul ii\anul ii - sem ii\sdd\test\test\1054_pita_alexandru.cpp(199): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(133): note: see declaration of 'strcpy'
+c:\users\pizza\desktop\informatica economica\anul ii\anul ii - sem ii\sdd\test\test\1054_pita_alexandru.cpp(258): warning C4326: return type of 'main' should be 'int' instead of 'void'
+c:\users\pizza\desktop\informatica economica\anul ii\anul ii - sem ii\sdd\test\test\1054_pita_alexandru.cpp(279): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\pizza\desktop\informatica economica\anul ii\anul ii - sem ii\sdd\test\test\1054_pita_alexandru.cpp(263): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: see declaration of 'fopen'
+c:\users\pizza\desktop\informatica economica\anul ii\anul ii - sem ii\sdd\test\test\1054_pita_alexandru.cpp(267): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(440): note: see declaration of 'strtok'
+c:\users\pizza\desktop\informatica economica\anul ii\anul ii - sem ii\sdd\test\test\1054_pita_alexandru.cpp(270): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(440): note: see declaration of 'strtok'
+c:\users\pizza\desktop\informatica economica\anul ii\anul ii - sem ii\sdd\test\test\1054_pita_alexandru.cpp(272): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(133): note: see declaration of 'strcpy'
+c:\users\pizza\desktop\informatica economica\anul ii\anul ii - sem ii\sdd\test\test\1054_pita_alexandru.cpp(274): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(440): note: see declaration of 'strtok'
+c:\users\pizza\desktop\informatica economica\anul ii\anul ii - sem ii\sdd\test\test\1054_pita_alexandru.cpp(276): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(133): note: see declaration of 'strcpy'
+c:\users\pizza\desktop\informatica economica\anul ii\anul ii - sem ii\sdd\test\test\1054_pita_alexandru.cpp(278): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(440): note: see declaration of 'strtok'
+c:\users\pizza\desktop\informatica economica\anul ii\anul ii - sem ii\sdd\test\test\1054_pita_alexandru.cpp(281): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(440): note: see declaration of 'strtok'
+c:\users\pizza\desktop\informatica economica\anul ii\anul ii - sem ii\sdd\test\test\1054_pita_alexandru.cpp(284): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(440): note: see declaration of 'strtok'
+  Test.vcxproj -> C:\Users\pizza\Desktop\Informatica Economica\Anul II\Anul II - Sem II\SDD\Test\Debug\Test.exe
